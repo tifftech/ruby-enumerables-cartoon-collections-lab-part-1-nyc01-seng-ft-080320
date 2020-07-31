@@ -1,11 +1,24 @@
-def greet_characters(array)
-  # Use `each` to enumerate over the provided array
-  #
-  # Print a custom greeting for each element
+def roll_call_dwarves(array)
+  index = 0
+  array.each_with_index {|name, index| puts "#{index + 1}. #{name} "}
 end
 
-def list_dwarves(array)
-  # Use `each_with_index` to enumerate over the provided array
-  #
-  # Print a numbered list of each element
+def summon_captain_planet(array)
+  planeteer_calls = []
+  array.collect do |calls|
+    planeteer_calls << "#{calls.capitalize}!"
+  end
+  planeteer_calls
+end
+
+def long_planeteer_calls(array)
+  array.any? do |word|
+    word.length > 4
+end
+end
+
+def find_the_cheese(array)
+  array.find do |cheese|
+    cheese == "cheddar" || cheese == "gouda" || cheese == "camembert"
+  end
 end
